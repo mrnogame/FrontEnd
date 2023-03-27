@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form" name="form-name" action="" method="post">
+        <p>Cognome</p>
+        <input id="cognome" name="cognome" type="text" max="40" placeholder="Cognome" maxlength="40" required>
+        <p>Nome</p>
+        <input id="nome" name="Nome" type="text" max="30" maxlength="40" placeholder="Nome" required>
+
+        <p>Matricola</p>
+        <input id="matricola" name="Matricola" type="number" size="7" max="123567" maxlength="1234567" required>
+        <p>Regione di residenza</p>
+        <input type="text" name="Regioni" id="Reg-di residenza" required list="regioni">
+        <datalist id="regioni">
+            <option>Regione Abruzzo</option>
+        <option> Regione Basilicata</option>
+            <option>Calabria</option> 
+            <option>Regione Campania</option>
+            <option>Regione Emilia Romagna</option>
+            <option>Regione Friuli Venezia Giulia</option>
+            <option>Regione Lazio</option>
+            <option>Regione Liguria</option>
+            <option>Regione Lombardia</option>
+            <option>Regione Marche</option>
+            <option>Regione Molise</option>
+            <option>Regione Piemonte</option>
+            <option>Regione Puglia</option>
+            <option>Regione Sardegna</option>
+            <option>Regione Sicilia</option>
+            <option>Regione Toscana</option>
+            <option>Regione Trentino Alto Adige</option>
+            <option>Regione Umbria</option>
+            <option>Regione Val d'Aosta</option>
+            <option>Regione Veneto</option>
+            <option>Provincia autonoma di Trento</option>
+            <option></option>Provincia autonoma di Bolzano
+        </datalist>
+        <p>Email</p>
+        <input type="text" id="email" name="email" required>
+        <p>Tel:</p>
+        <input id="tel" type="number" name="telefono" required>
+        <p>Status</p>
+        <!-- <input id="status" name="form-status" required> -->
+            <select name="status" id="form-status" required>
+            <option value="void" >  </option>
+            <option value="s1">in corso</option>
+            <option value="s2">fuori corso</option>
+            <option value="s3">ripetente</option>
+            <option value="s4"> part-time</option>
+        </select>   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+</body>
+</html>

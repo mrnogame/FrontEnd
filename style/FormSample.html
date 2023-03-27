@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form id="form" name="form-name" action="" method="post">
+    <fieldset>
+            <legend>Dati anagrafici</legend>
+            <!--- <label for="form-name">name</label>
+                <input type="text" name="nome" id="form-nome" value=""><br> -->
+    <p>Nome</p>
+    <input type="text" name="nome" id="form-nome" placeholder="Nome">
+        <p>Cognome</p>
+    <input type="text" name="nome" id="form-eta" placeholder="cognome">
+</fieldset>
+    <p>Password</p>
+    <input type="password" name="password" id="form-password">
+    <p>età</p>
+    <input type="number" name="eta" id="form-eta" min="0">
+    <p>Sesso</p>
+    <input type="radio" name="sesso" id="form-radio" value="M" checked>
+    <p>M</p>
+    <input type="radio" name="sesso" id="form-radio" value="F">
+    <p>F</p>
+    <p>Titiolo di studio</p>
+    <input type="radio" name="titolo di studio" id="form-titolo-studio-diploma">
+    <p>Diploma</p>
+    <input type="radio" name="titolo di studio" id="form-titolo-studio-laurea">
+    <p>laurea</p>
+    <input type="radio" name="titolo di studio" id="form-titolo-studio-master">
+    <p>Mater</p>
+    <p>Accetto condizioni di priacy</p>
+    <input type="checkbox" name="privacy" id="form-pricacy" value="M" checked>
+
+    <p>Serzio richiesto</p>
+    <select name="serzio" id="form-servizo" disabled>
+        <option value="void" selected></option> 
+        <option value="s1">servizio 01</option>
+        <option value="s2">servizio 02</option>
+        <option value="s3">servizio 02</option>
+        </select>
+        <p>inserisci un commento</p>
+        <!-- 
+             commento 
+        -->
+        <textarea name="text" id="form-commento" cols="30" rows="10"></textarea><br>
+
+        <label for="form-text-codice-fiscale">CF</label>
+            <input type="text" name="codice-foiscale" id="form-text-codice-fiscale">
+        <p>Conforma dati</p>
+        <input type="reset" value="annulla" id="form-btn-annulla" name="annulla">
+        <input type="submit" value="conferma" id="form-btn-conferma" name="conferma">
+        
+</form>
+</body>
+</html>

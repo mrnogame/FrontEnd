@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main id="main-content">
+     <!-- <p id= "demo"> </p>   -->
+    </main>
+    
+    <script>
+    
+        function cambiaImmagine() {
+            var img=document.getElementById("image")
+            img.src = "/Users/adam/Il mio Drive/FrontEnd/img/tramonto-africano-.jpeg"
+        }
+        var titoloH1 = '<h1>Le uova di Gallina</h1>';
+        var titoloH2 = '<h2>Freeda non KALO!!!!</h2>';
+        var paragrafo = '<p>Paragrafo su Freeda non KALO</p>';
+        var immagine = "<img  id='image'src='/Users/adam/Il mio Drive/FrontEnd/img/luffy.png' alt='Luffy'><br>";
+        var btnCambiaImmagine = '<input type=button value=cambia immagine onclick=cambiaImmagine()>';
+        var codiceHTML = titoloH1+titoloH2+immagine+btnCambiaImmagine;
+        // console.log
+        document.getElementById("main-content").innerHTML = codiceHTML;
+    </script>
+    <script>
+        
+    </script>
+   
+</html>

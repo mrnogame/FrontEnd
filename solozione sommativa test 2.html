@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main id="idMainContent">
+        <!--
+        <label for="txtImmagine01">immagine01 </label>
+            <input type="text" name="txtImmagine01" id="txtImmagine01">
+       
+        <br>
+        <label for="txtImmagine02">immagine01
+            <input type="text" name="txtImmagine02" id="txtImmagine02">
+        </label>
+        <br>
+        <div id="idImmagini">
+               ###Le  immagini  caricate a runtime###
+                <img src="img/luffy.png" alt="luffy" width="300" height="200" id="idImmagine01">
+                <img src="img/tramonto-africano-.jpeg" alt="luffy" width="300" height="200" id="idImmagine02">
+        </div>
+        <input type="button" value="caricamento immagini" onclick="caricaImmagine()">
+        <input type="button" value="inverti posizione" onclick="invertiImmagine()">
+        --->
+    </main>
+<script>
+        var strPaginaIniziale = '<label for="txtImmagine01">immagine01 </label>';
+        strPaginaIniziale +=    '<input type="text" name="txtImmagine01" id="txtImmagine01">';
+        // strPaginaIniziale =      strPaginaIniziale +  '<input type="text" name="txtImmagine01" id="txtImmagine01">'  è uguale alla riga precedente
+        strPaginaIniziale +=    '<br>'   
+        strPaginaIniziale +=    '<label for="txtImmagine02">immagine02 </label>';
+        strPaginaIniziale +=    '<input type="text" name="txtImmagini02" id="txtImmagine02">';
+        strPaginaIniziale +=    ' <div id="idImmagini">';
+        // strPaginaIniziale +=    '<img src="img/luffy.png" alt="luffy" width="300" height="200" id="idImmagine01">'
+        // strPaginaIniziale +=    '<img src="img/tramonto-africano-.jpeg" alt="tramonto" width="300" height="200" id="idImmagine02">' non vanno messe queste righe è solo per verificare se ho ricopiato bene le righe html
+        strPaginaIniziale +=    '</div>';
+        strPaginaIniziale +=    '<input type="button" value="caricamento immagini" onclick="caricaImmagine()">';
+        strPaginaIniziale +=    '<input type="button" value="inverti posizione" onclick="invertiImmagine()">';
+        document.getElementById("idMainContent").innerHTML = strPaginaIniziale;
+
+        var objImmagine01 = document.getElementById("txtImmagine01");
+        var objImmagine02 = document.getElementById("txtImmagine02");
+    // console.log(pathImmagine01);
+    // console.log(pathImmagine02);
+    function caricaImmagine() {
+        // console.log("immagine01" + objImmagine01.value);
+        // // console.log("immagine02" + objImmagine02.value);
+        // var strImmagini =  '<img src="img/'+ objImmagine01.value +'" alt="luffy" width="300" height="200" id="idImmagine01">';
+        // strImmagini +=     '<img src="img/'+ objImmagine02.value +'" alt="tramonto" width="300" height="200" id="idImmagine02">';
+
+
+        var strImmagini =  '<img src="img/'+ objImmagine01.value +'" alt="luffy" width="300" height="200" id="idImmagine01">';
+        strImmagini +=     '<img src="img/'+ objImmagine02.value +'" alt="tramonto" width="300" height="200" id="idImmagine02">';
+        console.log(strImmagini)
+        document.getElementById('idImmagini').innerHTML = strImmagini;
+        document.getElementById("idImmagini01").src = 'img/' + objImmagine01.value;
+        document.getElementById("idImmagini02").src = 'img/' + objImmagine02.value;
+
+        
+    }
+    function invertiImmaginiCopia() {
+
+        var objImmagine01ValueCopia =objImmagine01.value;
+        var objImmagine02ValueCopia =objImmagine02.value
+
+
+
+
+
+
+        var temp = objImmagine01;
+        objImmagine01 = objImmagine02;
+        objImmagine02 = temp;
+        var strImmagini =  '<img src="img/'+ objImmagine01.value +'" alt="luffy" width="300" height="200" id="idImmagine01">';
+        strImmagini +=     '<img src="img/'+ objImmagine02.value +'" alt="tramonto" width="300" height="200" id="idImmagine02">';
+        document.getElementById('idImmagini').innerHTML = strImmagini;
+
+    }
+</script>
+
+</body>
+</html>
