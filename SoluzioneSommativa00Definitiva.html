@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soluzione sommativa definitva</title>
+</head>
+<body onload="caricamentoPaginaIniziale()">
+    <main id="idMainContent">
+
+    </main>
+
+    <script>
+        function caricamentoPaginaIniziale() {
+            var strPaginaIniziale = '<label for="txtImmagine01">Immagine01</label>';
+            strPaginaIniziale +=    '   <input type="text" name="txtImmagine01" id="txtImmagine01" onchange="validazioneCampi()" placeholder="Faro.jpg"';
+            strPaginaIniziale +=    '<br/>'
+            strPaginaIniziale +=    '<label for="txtImmagine02">Immagine02</label>';
+            strPaginaIniziale +=    '   <input type="text" name="txtImmagine02" id="txtImmagine02" onchange="validazioneCampi()" placeholder="TramontoTropicale.jpg">';
+            strPaginaIniziale +=    '<br/>';
+            strPaginaIniziale +=    '<div id="idImmagini">';
+            strPaginaIniziale +=    '</div>';
+            strPaginaIniziale +=    '<input id="idCaricamentoImmagini" type="button" value="Caricamento immagini" onclick="caricaImmagini()" disabled>';
+            strPaginaIniziale +=    '<input id="idInvertiPosizione" type="button" value="Inverti posizione" onclick="invertiImmagini()" disabled>';
+            document.getElementById("idMainContent").innerHTML = strPaginaIniziale;   
+        }
+
+        function validazioneCampi() {
+            var txtImmagine01 = document.getElementById("txtImmagine01").value;
+            var txtImmagine02 = document.getElementById("txtImmagine02").value;
+            var btnCarimentoImmagine = document.getElementById("idCaricamentoImmagini");
+            if (txtImmagine01 != "" && txtImmagine02 != "") {
+                btnCarimentoImmagine.disabled = false;
+            } else {
+                btnCarimentoImmagine.disabled = true;
+            } 
+        }
+
+        function attivaBtnInvertiPosizione() {
+            var btnInvertiPosizione = document.getElementById("idInvertiPosizione");
+            btnInvertiPosizione.disabled=false;
+        }
+
+        function caricaImmagini() {
+            var txtImmagine01 = document.getElementById("txtImmagine01").value;
+            var txtImmagine02 = document.getElementById("txtImmagine02").value;
+            var strImmagini = '<img src="img/'+ txtImmagine01 +'" alt="Faro" width="300" height="200" id="idImmagine01">';
+            strImmagini +=    '<img src="img/'+ txtImmagine02 +'" alt="Tramonto tropicale" width="300" height="200" id="idImmagine02">';
+            document.getElementById("idImmagini").innerHTML = strImmagini;
+            attivaBtnInvertiPosizione();
+        }
+        function invertiImmagini() {
+            var immagine01 = document.getElementById("idImmagine01");
+            var immagine02 = document.getElementById("idImmagine02");
+            var temp = immagine01.src;
+            immagine01.src = immagine02.src
+            immagine02.src = temp;
+        }
+    </script>
+</body>
+</html>
