@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="calcola" onclick="Calcola()"> <br>
+    <input tyoe="button" value="calcola array" onclick="calcoaArray(100)">
+    
+    <span id = "idOperazione"></span>
+    <script>
+      
+        function Calcola() {
+            let valore01 = 10;
+            let valore02 = 20;
+            let operazione = "";
+            // let totalizzatore = somma(valore01,valore02);
+            // console.log("valore calcolato di somma:" + valore01.toString());
+            // // console.log("valore calcolato di somma:" + valore02.toString());
+            //  console.log('valore calcolato di somma: ' + somma(valore01,valore02).toString());
+            //  totalizzatore = moltiplica (valore01,valore02);
+            //  console.log("valore calcolato di moltiplica " + moltiplica(valore01,valore02).toString());
+            let spanOperazione = document.getElementById("idOperazione");
+            operazione = "+ "
+            spanOperazione.innerHTML = "operazione eseguita " + operazione + " risulato " + operazioniMatematiche(operazione,valore01,valore02).toString() ;   
+            
+        }
+        
+        function somma(par01,par02) {
+            return par01+par02;   
+        }
+        function moltiplica(par01,par02) {
+            return par01*par02
+        }
+        function operazioniMatematiche(oprazione,par01,par02) {
+            let valoreCalcolto = 0
+            // if(oprazione=="*")
+            //     return par01*par02;
+            // if(oprazione=="/")
+            //     if(par02!=0)
+            //         return par01/par02;
+            //     else
+            //         return "Error"
+            // if(oprazione=="+");
+            //     return par01+par02;
+            // if(oprazione=="-");
+            //     return par01-par02;
+            //  quando si usa switch le righe commentate sopra non servono piu a nulla 
+
+            switch (operazione) {
+                case "*":
+                    valoreCalcolto = par01*par02;
+                    break;
+                case "/":
+                    valoreCalcolto = par01/par02;
+                    break;
+                case "+":
+                    valoreCalcolto = par01+par02;
+                    break;
+                case "-":
+                    valoreCalcolto = par01-par02;
+                    break;
+
+                default:
+                    break;
+            }
+            return valoreCalcolto
+        }
+        function sommaOffsetArray(array,offset) {
+            console.log("array dentro funzione somma: " =+ array);
+            for (let i = 0; i < array.length; i++) {
+               array[i] += offset;
+                
+            }
+            console.log("array dentro somma dopo operazione: " + array);
+        }
+        function calcoaArray(offset) {
+            let MyArray =[10,20,30,40,50];
+            sommaOffsetArray(MyArray,offset);
+            let spanArray = document.getElementById("idArray");
+            spanArray.innerHTML = MyArray;
+            
+        }
+
+        // modificare elementi di un arrray.
+    </script>
+</body>
+</html>
